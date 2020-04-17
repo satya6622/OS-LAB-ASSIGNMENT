@@ -36,9 +36,11 @@ pthread_mutex_init(&mutex, NULL);
  
     for(int i = 0; i < 6; i++) { 
  
-        pthread_join(write[i], NULL);     } 
+        pthread_join(write[i], NULL);     
+    } 
  
-    pthread_mutex_destroy(&mutex);     sem_destroy(&wrt); 
+    pthread_mutex_destroy(&mutex);     
+    sem_destroy(&wrt); 
  
     return 0; 
  
